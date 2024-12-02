@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecoBuddy - Facilities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .search-filter input, .search-filter select {
+            padding: 10px;
+            width: 48%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .facility {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            display: none; /* Hidden initially for pagination */
+        }
+        .facility:last-child {
+            border-bottom: none;
+        }
+        .facility h3 {
+            margin: 0;
+            color: #333;
+        }
+        .facility p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .pagination .page-number {
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ecoBuddy - Local Eco-Facilities</h1>
+    </header>
+    <div class="container">
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search by name or location..." onkeyup="filterFacilities()">
+            <select id="categoryFilter" onchange="filterFacilities()">
+                <option value="">All Categories</option>
+                <option value="Recycling">Recycling</option>
+                <option value="EV Charging">EV Charging</option>
+                <option value="Eco-Business">Eco-Business</option>
+            </select>
+        </div>
+
+        <!-- Facilities List -->
+        <div id="facilitiesList">
+            <!-- Add multiple facility items here -->
+            <div class="facility" data-category="Recycling">
+                <h3>City Center Recycling Bin</h3>
+                <p><strong>Category:</strong> Recycling</p>
+                <p><strong>Location:</strong> 123 Main Street, City Center</p>
+            </div>
+
+            <div class="facility" data-category="EV Charging">
+                <h3>Green Park EV Charging Station</h3>
+                <p><strong>Category:</strong> EV Charging</p>
+                <p><strong>Location:</strong> 456 Green Park Avenue</p>
+            </div>
+
+            <div class="facility" data-category="Eco-Business">
+                <h3>EcoMart Organic Store</h3>
+                <p><strong>Category:</strong> Eco-Business</p>
+                <p><strong>Location:</strong> 789 Eco Street</p>
+            </div>
+
+            <!-- Add more facilities to test pagination -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination" id="paginationControls">
+            <button id="prevBtn" onclick="changePage(-1)" disabled>Previous</button>
+            <span id="pageNumbers"></span>
+            <button id="nextBtn" onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const facilitiesPerPage = 2;
+        let currentPage = 1;
+        const facilities = document.querySelectorAll('.facility');
+        const totalPages = Math.ceil(facilities.length / facilitiesPerPage);
+
+        function showPage(page) {
+            const start = (page - 1) * facilitiesPerPage;
+            const end = start + facilitiesPerPage;
+
+            facilities.forEach((facility, index) => {
+                facility.style.display = (index >= start && index < end) ? 'block' : 'none';
+            });
+
+            document.getElementById('prevBtn').disabled = (page === 1);
+            document.getElementById('nextBtn').disabled = (page === totalPages);
+
+            renderPageNumbers();
+        }
+
+        function changePage(direction) {
+            currentPage += direction;
+            showPage(currentPage);
+        }
+
+        function renderPageNumbers() {
+            const pageNumbers = document.getElementById('pageNumbers');
+            pageNumbers.innerHTML = `Page ${currentPage} of ${totalPages}`;
+        }
+
+        function filterFacilities() {
+            // Implement search and filtering logic as shown in the previous code
+            // After filtering, reset to page 1 and recalculate totalPages if needed
+            currentPage = 1;
+            showPage(currentPage);
+        }
+
+        // Initialize pagination on page load
+        window.onload = () => showPage(currentPage);
+    </script>
+</body>
+</html>

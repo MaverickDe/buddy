@@ -1,0 +1,136 @@
+<?php
+// Database connection
+$conn = new mysqli("localhost", "root", "", "ecoBuddyDB");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handling the CRUD operations
+
+// Create operation - Adding a new facility
+if (isset($_POST['create'])) {
+    $title = $_POST['title'];
+    $category = $_POST['category'];
+    $description = $_POST['description'];
+    $location = $_POST['location'];
+    $latitude = $_POST['latitude'];
+    $longitude = $_POST['longitude'];
+    $status = $_POST['status'];
+    $photo = $_FILES['photo']['name'];
+    move_uploaded_file($_FILES['photo']['tmp_name'], 'uploads/'.$photo);
+
+    $sql = "INSERT INTO ecofacilities (title, category, description, location, latitude, longitude, status, photo)
+            VALUES ('$title', '$category', '$description', '$location', '$latitude', '$longitude', '$status', '$photo')";
+    if ($conn->query($sql) === TRUE) {
+        echo "New facility added successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Update operation - Edit an existing facility
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $title = $_POST['title'];
+    $category = $_POST['category'];
+    $description = $_POST['description'];
+    $location = $_POST['location'];
+    $latitude = $_POST['latitude'];
+    $longitude = $_POST['longitude'];
+    $status = $_POST['status'];
+    $photo = $_FILES['photo']['name'];
+
+    // If new photo is uploaded, move it
+    if ($photo) {
+        move_uploaded_file($_FILES['photo']['tmp_name'], 'uploads/'.$photo);
+        $sql = "UPDATE ecofacilities SET title='$title', category='$category', description='$description', location='$location', latitude='$latitude', longitude='$longitude', status='$status', photo='$photo' WHERE id='$id'";
+    } else {
+        $sql = "UPDATE ecofacilities SET title='$title', category='$category', description='$description', location='$location', latitude='$latitude', longitude='$longitude', status='$status' WHERE id='$id'";
+    }
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Facility updated successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Delete operation - Remove a facility
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $sql = "DELETE FROM ecofacilities WHERE id='$id'";
+    if ($conn->query($sql) === TRUE) {
+        echo "Facility deleted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Fetch all facilities for viewing
+$sql = "SELECT * FROM ecofacilities";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage EcoFacilities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Manage EcoFacilities</h1>
+    
+    <!-- Add New Facility Form -->
+    <h2>Add New Facility</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="category" placeholder="Category" required>
+        <textarea name="description" placeholder="Description" required></textarea>
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="text" name="latitude" placeholder="Latitude" required>
+        <input type="text" name="longitude" placeholder="Longitude" required>
+        <input type="text" name="status" placeholder="Status" required>
+        <input type="file" name="photo">
+        <button type="submit" name="create">Add Facility</button>
+    </form>
+
+    <!-- Display Facilities -->
+    <h2>Existing Facilities</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = $result->fetch_assoc()) { ?>
+                <tr>
+                    <td><?php echo $row['title']; ?></td>
+                    <td><?php echo $row['category']; ?></td>
+                    <td><?php echo $row['description']; ?></td>
+                    <td><?php echo $row['location']; ?></td>
+                    <td><?php echo $row['status']; ?></td>
+                    <td>
+                        <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a> | 
+                        <a href="?delete=<?php echo $row['id']; ?>">Delete</a>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<?php
+// Close connection
+$conn->close();
+?>
