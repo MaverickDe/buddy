@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Routing;
+namespace App;
 
 class Router
 {
@@ -14,8 +14,6 @@ class Router
 
     public function get($route, $controller, $action)
     {
-
-    
         $this->addRoute($route, $controller, $action, "GET");
     }
 

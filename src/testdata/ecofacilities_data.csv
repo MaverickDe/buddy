@@ -1,0 +1,201 @@
+Facility ID,Name,Category,Description,Street Address,City,Postal Code,Latitude,Longitude,Status,Contact Phone,Manager,Rating
+1,Eco-business 1,Recycling Bin,This is a e-bike station located at Main St,718 Market St,Kano,67978,-0.09385,7.806846,Operational,+234-710-1203,EcoSave Corp.,3.6
+2,EV Charging Station 2,Solar Panel Station,This is a eco-business located at Market St,158 Highland Ave,Ibadan,30034,2.133559,4.227849,Operational,+234-779-8592,Eco Future Inc.,4.4
+3,Eco-business 3,EV Charging Station,This is a e-bike station located at Broadway,393 Sunset Blvd,Ibadan,90000,3.143006,5.469534,Under Maintenance,+234-891-4893,EcoSave Corp.,3.3
+4,Eco-business 4,Eco-business,This is a recycling bin located at Main St,363 Highland Ave,Port Harcourt,89223,3.899051,3.814235,Operational,+234-881-2868,GreenTech Co.,4.5
+5,EV Charging Station 5,E-bike Station,This is a e-bike station located at Main St,733 Sunset Blvd,Port Harcourt,16417,5.982069,3.05605,Out of Service,+234-723-2374,Green Solutions Ltd.,3.1
+6,Recycling Bin 6,Eco-business,This is a ev charging station located at Sunset Blvd,444 Broadway,Kano,21429,5.602634,7.245317,Out of Service,+234-725-4997,Eco Future Inc.,4.7
+7,Solar Panel Station 7,EV Charging Station,This is a e-bike station located at Sunset Blvd,537 Broadway,Ibadan,51145,1.386755,7.80636,Under Maintenance,+234-703-8025,Sustainability Hub,3.3
+8,Solar Panel Station 8,Recycling Bin,This is a e-bike station located at Main St,407 Highland Ave,Kano,21095,3.635267,5.849208,Out of Service,+234-842-9029,GreenTech Co.,3.1
+9,E-bike Station 9,EV Charging Station,This is a ev charging station located at Broadway,836 Market St,Kano,35465,0.594863,4.394523,Operational,+234-776-7851,EcoSave Corp.,3.8
+10,Eco-business 10,E-bike Station,This is a recycling bin located at Highland Ave,335 Sunset Blvd,Lagos,92059,5.919157,5.427052,Out of Service,+234-787-9805,Sustainability Hub,4.0
+11,Solar Panel Station 11,E-bike Station,This is a eco-business located at Broadway,286 Broadway,Lagos,65588,-1.048994,3.639057,Operational,+234-884-5887,EcoSave Corp.,3.6
+12,E-bike Station 12,Recycling Bin,This is a eco-business located at Main St,127 Broadway,Port Harcourt,32625,3.305515,7.863745,Out of Service,+234-888-9853,GreenTech Co.,4.0
+13,Solar Panel Station 13,Solar Panel Station,This is a eco-business located at Main St,311 Highland Ave,Abuja,42052,3.656453,4.850709,Out of Service,+234-781-1046,EcoSave Corp.,4.0
+14,Solar Panel Station 14,Eco-business,This is a e-bike station located at Market St,805 Market St,Ibadan,33222,-0.666326,5.701297,Under Maintenance,+234-789-8977,Green Solutions Ltd.,3.7
+15,Solar Panel Station 15,Recycling Bin,This is a solar panel station located at Broadway,497 Highland Ave,Lagos,89780,2.62912,6.989425,Under Maintenance,+234-700-5934,EcoSave Corp.,3.7
+16,Eco-business 16,Eco-business,This is a recycling bin located at Market St,579 Broadway,Abuja,79631,4.609415,3.310769,Under Maintenance,+234-781-4306,Green Solutions Ltd.,3.1
+17,Eco-business 17,Solar Panel Station,This is a e-bike station located at Main St,499 Market St,Lagos,38541,0.530467,4.589592,Under Maintenance,+234-757-7235,EcoSave Corp.,4.7
+18,Solar Panel Station 18,Recycling Bin,This is a ev charging station located at Highland Ave,335 Broadway,Port Harcourt,96109,-1.34551,4.646928,Under Maintenance,+234-758-2955,Green Solutions Ltd.,4.6
+19,EV Charging Station 19,Eco-business,This is a eco-business located at Broadway,203 Sunset Blvd,Kano,48817,4.86847,3.326179,Under Maintenance,+234-898-8777,Green Solutions Ltd.,3.3
+20,Solar Panel Station 20,Eco-business,This is a solar panel station located at Main St,716 Broadway,Abuja,47803,0.954947,5.831629,Operational,+234-789-1925,EcoSave Corp.,4.9
+21,Solar Panel Station 21,E-bike Station,This is a ev charging station located at Main St,577 Market St,Kano,29773,5.406132,4.124354,Out of Service,+234-728-9211,Green Solutions Ltd.,3.7
+22,Eco-business 22,EV Charging Station,This is a e-bike station located at Market St,979 Market St,Abuja,10884,3.121976,4.054506,Under Maintenance,+234-804-9054,EcoSave Corp.,3.3
+23,E-bike Station 23,Eco-business,This is a eco-business located at Market St,322 Highland Ave,Port Harcourt,97872,3.391286,7.801179,Operational,+234-776-2590,GreenTech Co.,3.0
+24,Solar Panel Station 24,Recycling Bin,This is a recycling bin located at Sunset Blvd,207 Market St,Port Harcourt,52797,0.757101,3.841448,Under Maintenance,+234-823-4885,Eco Future Inc.,3.0
+25,EV Charging Station 25,Solar Panel Station,This is a ev charging station located at Broadway,355 Highland Ave,Ibadan,79210,2.316499,6.546641,Out of Service,+234-820-7427,Eco Future Inc.,4.1
+26,E-bike Station 26,E-bike Station,This is a solar panel station located at Broadway,692 Highland Ave,Kano,75899,4.490813,7.819035,Operational,+234-862-9076,Eco Future Inc.,3.7
+27,Eco-business 27,Solar Panel Station,This is a e-bike station located at Highland Ave,934 Main St,Kano,52503,5.94134,5.384723,Out of Service,+234-713-2939,GreenTech Co.,3.4
+28,EV Charging Station 28,Solar Panel Station,This is a e-bike station located at Sunset Blvd,775 Main St,Ibadan,63203,-0.985198,7.049312,Out of Service,+234-824-9914,Eco Future Inc.,3.4
+29,Eco-business 29,Eco-business,This is a e-bike station located at Highland Ave,931 Broadway,Port Harcourt,60449,0.267419,3.140519,Out of Service,+234-808-6132,Eco Future Inc.,3.7
+30,EV Charging Station 30,Solar Panel Station,This is a recycling bin located at Sunset Blvd,959 Market St,Kano,68507,3.251496,7.653179,Out of Service,+234-779-9577,Green Solutions Ltd.,3.4
+31,Solar Panel Station 31,Recycling Bin,This is a e-bike station located at Market St,785 Sunset Blvd,Lagos,81292,-0.466805,4.184963,Out of Service,+234-760-7852,GreenTech Co.,4.2
+32,Solar Panel Station 32,E-bike Station,This is a solar panel station located at Sunset Blvd,104 Main St,Port Harcourt,33662,-1.151325,4.150781,Under Maintenance,+234-733-5747,GreenTech Co.,4.1
+33,EV Charging Station 33,Recycling Bin,This is a e-bike station located at Highland Ave,894 Sunset Blvd,Ibadan,24387,2.084092,3.863255,Under Maintenance,+234-894-5564,EcoSave Corp.,4.4
+34,Solar Panel Station 34,Eco-business,This is a eco-business located at Highland Ave,962 Sunset Blvd,Kano,91572,-0.786083,4.613688,Out of Service,+234-770-3334,GreenTech Co.,4.5
+35,E-bike Station 35,Eco-business,This is a solar panel station located at Market St,530 Main St,Kano,31747,-1.436859,7.837564,Under Maintenance,+234-816-4382,GreenTech Co.,3.9
+36,EV Charging Station 36,Solar Panel Station,This is a eco-business located at Sunset Blvd,312 Sunset Blvd,Ibadan,75119,2.701641,3.115553,Under Maintenance,+234-748-8531,Sustainability Hub,4.9
+37,Recycling Bin 37,Solar Panel Station,This is a e-bike station located at Market St,214 Main St,Ibadan,77715,3.066976,3.431914,Out of Service,+234-785-6506,Sustainability Hub,4.0
+38,EV Charging Station 38,Eco-business,This is a e-bike station located at Market St,230 Market St,Lagos,83586,3.466961,7.42442,Under Maintenance,+234-823-7963,GreenTech Co.,4.2
+39,Eco-business 39,EV Charging Station,This is a recycling bin located at Main St,286 Sunset Blvd,Port Harcourt,49023,5.553455,7.779865,Out of Service,+234-807-3591,Eco Future Inc.,4.2
+40,E-bike Station 40,Solar Panel Station,This is a eco-business located at Main St,993 Highland Ave,Ibadan,46703,0.449591,4.05169,Under Maintenance,+234-792-1528,EcoSave Corp.,4.6
+41,Recycling Bin 41,Recycling Bin,This is a solar panel station located at Highland Ave,670 Main St,Kano,63827,1.667531,4.725246,Under Maintenance,+234-873-4972,EcoSave Corp.,4.2
+42,Eco-business 42,Recycling Bin,This is a solar panel station located at Main St,118 Broadway,Kano,77762,3.246659,4.709672,Operational,+234-839-5167,EcoSave Corp.,4.8
+43,EV Charging Station 43,Solar Panel Station,This is a recycling bin located at Highland Ave,768 Sunset Blvd,Kano,72500,2.142296,4.925387,Under Maintenance,+234-853-6178,GreenTech Co.,4.9
+44,Recycling Bin 44,EV Charging Station,This is a eco-business located at Market St,769 Main St,Lagos,91522,-1.051446,6.546899,Operational,+234-714-1800,Sustainability Hub,4.5
+45,E-bike Station 45,EV Charging Station,This is a solar panel station located at Main St,558 Sunset Blvd,Abuja,61895,1.970162,7.018818,Out of Service,+234-775-6927,EcoSave Corp.,4.6
+46,Recycling Bin 46,EV Charging Station,This is a e-bike station located at Broadway,825 Broadway,Abuja,22622,-1.346997,5.615599,Operational,+234-855-8314,Eco Future Inc.,4.8
+47,EV Charging Station 47,EV Charging Station,This is a e-bike station located at Broadway,472 Broadway,Kano,51840,1.435898,5.395581,Under Maintenance,+234-774-1454,Green Solutions Ltd.,3.3
+48,E-bike Station 48,Recycling Bin,This is a eco-business located at Market St,782 Market St,Port Harcourt,51761,-0.123516,6.122663,Out of Service,+234-820-1862,GreenTech Co.,4.2
+49,Solar Panel Station 49,E-bike Station,This is a e-bike station located at Market St,581 Main St,Kano,32841,-1.303037,7.404533,Operational,+234-859-3678,Sustainability Hub,4.3
+50,EV Charging Station 50,Eco-business,This is a eco-business located at Market St,707 Highland Ave,Kano,66958,-1.087297,4.443311,Under Maintenance,+234-873-8648,EcoSave Corp.,4.9
+51,EV Charging Station 51,E-bike Station,This is a solar panel station located at Highland Ave,373 Sunset Blvd,Kano,26130,2.458274,4.518058,Under Maintenance,+234-845-4077,Eco Future Inc.,3.2
+52,Recycling Bin 52,EV Charging Station,This is a ev charging station located at Broadway,969 Market St,Ibadan,81773,-0.667842,5.576027,Under Maintenance,+234-729-6248,GreenTech Co.,4.5
+53,EV Charging Station 53,EV Charging Station,This is a e-bike station located at Sunset Blvd,259 Highland Ave,Ibadan,68561,3.616367,6.748437,Under Maintenance,+234-865-9704,Green Solutions Ltd.,3.3
+54,EV Charging Station 54,E-bike Station,This is a ev charging station located at Market St,603 Market St,Kano,86415,2.947696,5.002255,Operational,+234-810-9326,EcoSave Corp.,4.1
+55,Recycling Bin 55,Eco-business,This is a recycling bin located at Broadway,371 Main St,Ibadan,96430,4.669595,4.402176,Operational,+234-829-5157,Eco Future Inc.,4.2
+56,E-bike Station 56,Eco-business,This is a solar panel station located at Market St,319 Sunset Blvd,Port Harcourt,75065,0.884764,4.403005,Operational,+234-819-9482,GreenTech Co.,4.1
+57,Solar Panel Station 57,Solar Panel Station,This is a ev charging station located at Highland Ave,146 Sunset Blvd,Lagos,15204,3.523525,6.745694,Out of Service,+234-808-8463,Eco Future Inc.,3.9
+58,Recycling Bin 58,Eco-business,This is a ev charging station located at Highland Ave,496 Sunset Blvd,Ibadan,45084,3.056701,4.182048,Under Maintenance,+234-749-2832,Sustainability Hub,4.9
+59,Solar Panel Station 59,E-bike Station,This is a e-bike station located at Market St,467 Main St,Lagos,80333,-0.954148,7.954786,Under Maintenance,+234-840-3238,EcoSave Corp.,4.3
+60,Eco-business 60,Recycling Bin,This is a solar panel station located at Highland Ave,978 Sunset Blvd,Kano,89713,5.324056,3.385216,Out of Service,+234-863-4903,Sustainability Hub,4.0
+61,E-bike Station 61,Solar Panel Station,This is a ev charging station located at Highland Ave,988 Market St,Lagos,42748,4.299826,4.525557,Under Maintenance,+234-826-6838,Eco Future Inc.,4.0
+62,EV Charging Station 62,Solar Panel Station,This is a recycling bin located at Sunset Blvd,573 Broadway,Port Harcourt,95846,5.683475,3.191245,Operational,+234-703-6614,GreenTech Co.,3.3
+63,Recycling Bin 63,E-bike Station,This is a solar panel station located at Main St,872 Broadway,Port Harcourt,88695,1.426,4.349029,Out of Service,+234-894-2787,GreenTech Co.,4.1
+64,E-bike Station 64,EV Charging Station,This is a solar panel station located at Market St,840 Highland Ave,Abuja,57790,5.002521,7.677696,Under Maintenance,+234-704-4684,EcoSave Corp.,3.9
+65,Eco-business 65,E-bike Station,This is a ev charging station located at Sunset Blvd,931 Market St,Lagos,10330,5.248072,5.159581,Operational,+234-887-7442,Eco Future Inc.,4.7
+66,Recycling Bin 66,Recycling Bin,This is a e-bike station located at Market St,305 Sunset Blvd,Kano,14830,-1.281475,3.437654,Under Maintenance,+234-703-9677,Eco Future Inc.,3.7
+67,EV Charging Station 67,Solar Panel Station,This is a solar panel station located at Highland Ave,752 Sunset Blvd,Abuja,83271,4.470041,3.227329,Under Maintenance,+234-864-6739,Green Solutions Ltd.,4.0
+68,Eco-business 68,Solar Panel Station,This is a eco-business located at Sunset Blvd,309 Sunset Blvd,Abuja,91620,4.779757,6.894356,Under Maintenance,+234-760-7206,Green Solutions Ltd.,3.4
+69,Solar Panel Station 69,Eco-business,This is a e-bike station located at Highland Ave,920 Highland Ave,Abuja,42792,0.043849,7.724075,Operational,+234-800-1336,Sustainability Hub,3.2
+70,Eco-business 70,EV Charging Station,This is a ev charging station located at Broadway,918 Broadway,Ibadan,26115,-1.355762,6.964977,Operational,+234-734-8314,Sustainability Hub,3.4
+71,EV Charging Station 71,Recycling Bin,This is a ev charging station located at Sunset Blvd,767 Broadway,Ibadan,56733,2.830419,7.305341,Operational,+234-854-9938,EcoSave Corp.,4.3
+72,Recycling Bin 72,Eco-business,This is a e-bike station located at Sunset Blvd,919 Market St,Port Harcourt,46971,6.335529,4.518705,Under Maintenance,+234-840-4641,Eco Future Inc.,4.1
+73,Eco-business 73,EV Charging Station,This is a recycling bin located at Main St,791 Main St,Kano,71495,4.676424,4.041713,Operational,+234-784-6735,Green Solutions Ltd.,4.6
+74,EV Charging Station 74,Recycling Bin,This is a solar panel station located at Sunset Blvd,140 Main St,Port Harcourt,61261,0.944976,5.871927,Under Maintenance,+234-741-9602,Green Solutions Ltd.,4.8
+75,EV Charging Station 75,EV Charging Station,This is a recycling bin located at Market St,858 Main St,Port Harcourt,56570,3.516607,5.364141,Under Maintenance,+234-889-8962,Eco Future Inc.,4.2
+76,E-bike Station 76,Eco-business,This is a eco-business located at Broadway,801 Highland Ave,Kano,11890,3.34455,6.653702,Out of Service,+234-855-8995,GreenTech Co.,4.8
+77,EV Charging Station 77,Eco-business,This is a eco-business located at Main St,655 Broadway,Kano,93323,5.655121,5.485092,Operational,+234-752-6801,Green Solutions Ltd.,4.9
+78,E-bike Station 78,EV Charging Station,This is a ev charging station located at Sunset Blvd,758 Broadway,Lagos,65530,-0.871482,7.452458,Operational,+234-727-1465,GreenTech Co.,4.7
+79,Eco-business 79,Eco-business,This is a e-bike station located at Main St,927 Sunset Blvd,Ibadan,50561,1.904956,3.661905,Out of Service,+234-866-3420,GreenTech Co.,4.1
+80,Recycling Bin 80,E-bike Station,This is a solar panel station located at Main St,395 Highland Ave,Port Harcourt,44744,5.458692,5.463141,Operational,+234-857-8393,Eco Future Inc.,3.2
+81,Eco-business 81,EV Charging Station,This is a recycling bin located at Broadway,883 Broadway,Kano,74716,2.678754,4.096691,Operational,+234-833-2582,EcoSave Corp.,4.2
+82,EV Charging Station 82,Recycling Bin,This is a solar panel station located at Highland Ave,460 Highland Ave,Ibadan,89381,-0.182563,6.91188,Under Maintenance,+234-737-1130,EcoSave Corp.,3.9
+83,EV Charging Station 83,Recycling Bin,This is a recycling bin located at Broadway,776 Highland Ave,Ibadan,17326,0.03114,5.122689,Operational,+234-804-9954,Eco Future Inc.,4.8
+84,Recycling Bin 84,E-bike Station,This is a eco-business located at Main St,980 Broadway,Lagos,19094,5.658546,6.892556,Out of Service,+234-748-7155,GreenTech Co.,3.5
+85,E-bike Station 85,E-bike Station,This is a e-bike station located at Highland Ave,487 Sunset Blvd,Kano,88636,5.968698,5.819092,Out of Service,+234-724-8011,EcoSave Corp.,4.2
+86,E-bike Station 86,Recycling Bin,This is a recycling bin located at Highland Ave,309 Main St,Ibadan,85651,5.463456,5.714866,Operational,+234-899-5843,GreenTech Co.,4.4
+87,Recycling Bin 87,Solar Panel Station,This is a e-bike station located at Main St,658 Sunset Blvd,Abuja,76214,1.818172,3.694355,Under Maintenance,+234-838-1208,Sustainability Hub,4.0
+88,EV Charging Station 88,Solar Panel Station,This is a solar panel station located at Highland Ave,560 Main St,Kano,30921,2.114026,7.329936,Out of Service,+234-739-1261,Green Solutions Ltd.,4.2
+89,Solar Panel Station 89,Recycling Bin,This is a ev charging station located at Market St,938 Market St,Kano,98268,2.651744,4.505394,Under Maintenance,+234-755-5926,Green Solutions Ltd.,3.4
+90,Solar Panel Station 90,Recycling Bin,This is a recycling bin located at Market St,560 Sunset Blvd,Port Harcourt,85958,6.188386,5.619277,Operational,+234-741-7125,Sustainability Hub,4.4
+91,Recycling Bin 91,EV Charging Station,This is a ev charging station located at Main St,899 Market St,Lagos,84706,3.299866,5.633255,Under Maintenance,+234-847-7366,EcoSave Corp.,4.9
+92,E-bike Station 92,Eco-business,This is a eco-business located at Sunset Blvd,560 Main St,Kano,65492,3.783968,3.873473,Out of Service,+234-722-1546,EcoSave Corp.,4.4
+93,Solar Panel Station 93,E-bike Station,This is a e-bike station located at Market St,936 Market St,Abuja,78719,6.075512,5.284013,Under Maintenance,+234-788-1698,Sustainability Hub,4.8
+94,Recycling Bin 94,Eco-business,This is a solar panel station located at Market St,584 Main St,Port Harcourt,78681,-1.124106,5.964365,Out of Service,+234-807-8748,GreenTech Co.,3.2
+95,E-bike Station 95,Solar Panel Station,This is a e-bike station located at Sunset Blvd,839 Broadway,Kano,95314,-0.106348,5.771152,Out of Service,+234-754-6252,GreenTech Co.,3.4
+96,EV Charging Station 96,Recycling Bin,This is a recycling bin located at Broadway,672 Market St,Kano,29410,4.499739,7.288613,Operational,+234-831-5722,EcoSave Corp.,4.8
+97,E-bike Station 97,Solar Panel Station,This is a e-bike station located at Broadway,553 Broadway,Ibadan,11525,3.813767,7.883765,Operational,+234-790-1693,EcoSave Corp.,4.0
+98,Eco-business 98,Solar Panel Station,This is a ev charging station located at Sunset Blvd,239 Market St,Ibadan,69362,4.035066,6.684013,Operational,+234-767-1274,EcoSave Corp.,4.9
+99,E-bike Station 99,Eco-business,This is a e-bike station located at Market St,862 Main St,Kano,36818,3.550831,7.180245,Out of Service,+234-852-7647,Green Solutions Ltd.,4.7
+100,Eco-business 100,E-bike Station,This is a solar panel station located at Broadway,308 Market St,Abuja,82922,-0.101258,6.892515,Operational,+234-835-9758,EcoSave Corp.,3.8
+101,Recycling Bin 101,E-bike Station,This is a ev charging station located at Broadway,773 Broadway,Ibadan,20711,6.105928,3.358031,Under Maintenance,+234-716-6758,Sustainability Hub,3.4
+102,E-bike Station 102,EV Charging Station,This is a recycling bin located at Sunset Blvd,599 Highland Ave,Kano,51107,6.361321,7.845868,Out of Service,+234-800-6283,EcoSave Corp.,4.6
+103,Eco-business 103,E-bike Station,This is a ev charging station located at Sunset Blvd,447 Market St,Lagos,65581,2.56579,6.014609,Operational,+234-836-9465,Eco Future Inc.,4.9
+104,Solar Panel Station 104,Recycling Bin,This is a recycling bin located at Broadway,441 Main St,Lagos,67799,1.645616,7.816708,Operational,+234-749-2416,Green Solutions Ltd.,4.4
+105,E-bike Station 105,EV Charging Station,This is a e-bike station located at Market St,348 Highland Ave,Kano,51161,-1.210063,6.297218,Under Maintenance,+234-744-6469,Eco Future Inc.,3.9
+106,Eco-business 106,EV Charging Station,This is a ev charging station located at Highland Ave,721 Sunset Blvd,Kano,65159,1.541929,7.704509,Out of Service,+234-727-6113,Eco Future Inc.,4.8
+107,Eco-business 107,EV Charging Station,This is a solar panel station located at Market St,681 Main St,Kano,68603,2.590473,7.030227,Under Maintenance,+234-725-5444,Green Solutions Ltd.,3.3
+108,E-bike Station 108,Recycling Bin,This is a e-bike station located at Main St,598 Broadway,Ibadan,62521,1.187423,5.837619,Under Maintenance,+234-778-6053,Green Solutions Ltd.,3.8
+109,Eco-business 109,Eco-business,This is a ev charging station located at Highland Ave,138 Sunset Blvd,Ibadan,61025,3.478257,6.214944,Out of Service,+234-762-1960,Green Solutions Ltd.,3.2
+110,Eco-business 110,Eco-business,This is a solar panel station located at Broadway,133 Sunset Blvd,Kano,33552,4.665773,7.375065,Operational,+234-772-4711,Green Solutions Ltd.,4.2
+111,Eco-business 111,Solar Panel Station,This is a e-bike station located at Sunset Blvd,419 Market St,Ibadan,15184,1.585715,5.685638,Out of Service,+234-804-8181,Eco Future Inc.,3.4
+112,Recycling Bin 112,EV Charging Station,This is a e-bike station located at Main St,339 Market St,Abuja,70401,3.027653,7.426863,Operational,+234-839-7270,GreenTech Co.,3.0
+113,EV Charging Station 113,Recycling Bin,This is a recycling bin located at Main St,221 Broadway,Abuja,56594,4.041167,4.271364,Out of Service,+234-725-7756,Green Solutions Ltd.,3.3
+114,E-bike Station 114,Eco-business,This is a recycling bin located at Main St,633 Broadway,Port Harcourt,33732,2.535316,7.122431,Out of Service,+234-739-5677,GreenTech Co.,3.0
+115,E-bike Station 115,Recycling Bin,This is a ev charging station located at Sunset Blvd,215 Highland Ave,Kano,28808,0.168129,5.218525,Out of Service,+234-749-8962,Sustainability Hub,4.9
+116,Recycling Bin 116,Eco-business,This is a ev charging station located at Main St,998 Highland Ave,Kano,58199,6.379546,4.509739,Under Maintenance,+234-740-2562,Eco Future Inc.,3.2
+117,EV Charging Station 117,E-bike Station,This is a ev charging station located at Market St,458 Main St,Ibadan,54614,-1.025244,3.942052,Under Maintenance,+234-725-4480,EcoSave Corp.,3.7
+118,E-bike Station 118,EV Charging Station,This is a recycling bin located at Broadway,205 Market St,Ibadan,96216,1.783902,4.126985,Out of Service,+234-823-7939,Green Solutions Ltd.,4.6
+119,Recycling Bin 119,Recycling Bin,This is a eco-business located at Main St,230 Main St,Kano,56125,4.844531,7.568074,Under Maintenance,+234-815-5297,Eco Future Inc.,4.5
+120,Eco-business 120,Eco-business,This is a eco-business located at Highland Ave,438 Market St,Kano,22997,4.463016,7.166861,Under Maintenance,+234-868-6901,GreenTech Co.,3.9
+121,E-bike Station 121,E-bike Station,This is a eco-business located at Sunset Blvd,657 Sunset Blvd,Kano,51960,3.434479,4.420825,Under Maintenance,+234-791-4947,Eco Future Inc.,3.2
+122,EV Charging Station 122,Solar Panel Station,This is a e-bike station located at Market St,441 Market St,Abuja,58414,0.367262,3.903751,Operational,+234-743-3042,Green Solutions Ltd.,4.8
+123,Eco-business 123,Solar Panel Station,This is a solar panel station located at Market St,313 Sunset Blvd,Port Harcourt,33672,1.838796,6.059854,Operational,+234-815-8166,Eco Future Inc.,3.7
+124,Solar Panel Station 124,EV Charging Station,This is a recycling bin located at Market St,897 Main St,Kano,84981,-0.272223,6.868213,Operational,+234-751-7716,Green Solutions Ltd.,3.9
+125,Recycling Bin 125,E-bike Station,This is a solar panel station located at Market St,601 Market St,Port Harcourt,84621,6.229883,6.444761,Under Maintenance,+234-747-2194,Sustainability Hub,4.5
+126,Eco-business 126,Solar Panel Station,This is a solar panel station located at Broadway,992 Main St,Lagos,60284,2.768519,7.664653,Operational,+234-786-3663,GreenTech Co.,3.5
+127,Eco-business 127,Solar Panel Station,This is a e-bike station located at Highland Ave,190 Highland Ave,Lagos,44676,1.887495,6.399682,Under Maintenance,+234-817-8997,GreenTech Co.,3.7
+128,Solar Panel Station 128,Recycling Bin,This is a eco-business located at Sunset Blvd,628 Broadway,Ibadan,16053,4.665099,7.271972,Out of Service,+234-726-3228,Eco Future Inc.,4.0
+129,E-bike Station 129,E-bike Station,This is a e-bike station located at Main St,499 Sunset Blvd,Port Harcourt,37158,-1.244198,6.483452,Operational,+234-737-6800,GreenTech Co.,4.4
+130,E-bike Station 130,EV Charging Station,This is a solar panel station located at Main St,760 Main St,Lagos,38693,6.042649,3.253842,Out of Service,+234-711-6497,GreenTech Co.,4.4
+131,EV Charging Station 131,E-bike Station,This is a solar panel station located at Highland Ave,287 Highland Ave,Kano,72498,1.569468,5.615146,Under Maintenance,+234-760-9507,Sustainability Hub,3.4
+132,Recycling Bin 132,Eco-business,This is a eco-business located at Main St,381 Sunset Blvd,Lagos,53308,5.235198,6.156868,Under Maintenance,+234-771-4516,Eco Future Inc.,5.0
+133,Recycling Bin 133,E-bike Station,This is a recycling bin located at Highland Ave,624 Highland Ave,Kano,58046,0.97275,3.143431,Operational,+234-803-6896,Green Solutions Ltd.,4.2
+134,Recycling Bin 134,EV Charging Station,This is a recycling bin located at Market St,939 Main St,Port Harcourt,99066,-1.060982,7.102553,Under Maintenance,+234-733-5499,Green Solutions Ltd.,3.9
+135,Eco-business 135,Eco-business,This is a e-bike station located at Sunset Blvd,167 Sunset Blvd,Port Harcourt,60763,4.6507,6.032764,Under Maintenance,+234-813-2310,Sustainability Hub,4.6
+136,E-bike Station 136,Recycling Bin,This is a eco-business located at Main St,174 Market St,Abuja,90430,-0.730672,3.993772,Under Maintenance,+234-895-4114,Green Solutions Ltd.,3.7
+137,Eco-business 137,Eco-business,This is a ev charging station located at Broadway,867 Market St,Lagos,84065,3.680251,6.552356,Operational,+234-706-9694,Sustainability Hub,3.3
+138,Solar Panel Station 138,Solar Panel Station,This is a e-bike station located at Main St,879 Broadway,Abuja,21862,0.83615,4.215443,Operational,+234-737-1349,Sustainability Hub,3.4
+139,Eco-business 139,E-bike Station,This is a eco-business located at Broadway,820 Market St,Lagos,96694,1.093528,7.594251,Operational,+234-750-3151,GreenTech Co.,4.4
+140,EV Charging Station 140,EV Charging Station,This is a solar panel station located at Highland Ave,408 Sunset Blvd,Port Harcourt,32944,2.313694,7.468862,Out of Service,+234-746-1167,Sustainability Hub,4.3
+141,Recycling Bin 141,E-bike Station,This is a solar panel station located at Sunset Blvd,837 Broadway,Kano,96530,1.039585,6.083162,Out of Service,+234-850-5865,EcoSave Corp.,4.1
+142,Recycling Bin 142,Solar Panel Station,This is a solar panel station located at Sunset Blvd,144 Sunset Blvd,Port Harcourt,12534,4.763002,4.10623,Out of Service,+234-775-9884,Green Solutions Ltd.,4.4
+143,Solar Panel Station 143,E-bike Station,This is a e-bike station located at Main St,657 Sunset Blvd,Lagos,31289,5.790537,6.042478,Under Maintenance,+234-859-8125,Green Solutions Ltd.,3.8
+144,Eco-business 144,Recycling Bin,This is a ev charging station located at Market St,453 Market St,Lagos,42717,4.852023,7.886356,Under Maintenance,+234-782-5415,Sustainability Hub,3.7
+145,Recycling Bin 145,EV Charging Station,This is a ev charging station located at Market St,385 Main St,Lagos,28595,5.852507,3.78584,Under Maintenance,+234-737-4552,EcoSave Corp.,4.4
+146,Solar Panel Station 146,Recycling Bin,This is a solar panel station located at Sunset Blvd,760 Market St,Ibadan,61934,2.559653,3.882457,Operational,+234-788-2396,Sustainability Hub,4.8
+147,E-bike Station 147,E-bike Station,This is a solar panel station located at Highland Ave,456 Sunset Blvd,Kano,39619,-0.476106,7.85285,Operational,+234-700-1536,GreenTech Co.,4.2
+148,E-bike Station 148,E-bike Station,This is a recycling bin located at Highland Ave,362 Broadway,Abuja,65142,-0.495922,6.005682,Operational,+234-711-6099,GreenTech Co.,4.2
+149,Solar Panel Station 149,E-bike Station,This is a eco-business located at Market St,531 Sunset Blvd,Port Harcourt,47448,4.788513,4.35212,Out of Service,+234-803-3506,GreenTech Co.,3.8
+150,Eco-business 150,EV Charging Station,This is a solar panel station located at Main St,946 Highland Ave,Lagos,97905,4.560233,7.797738,Under Maintenance,+234-751-6706,Green Solutions Ltd.,4.0
+151,Eco-business 151,Recycling Bin,This is a recycling bin located at Sunset Blvd,319 Highland Ave,Ibadan,23688,0.407764,6.003972,Under Maintenance,+234-879-5441,Eco Future Inc.,4.9
+152,Solar Panel Station 152,EV Charging Station,This is a recycling bin located at Market St,335 Main St,Kano,33046,-1.307147,5.890179,Under Maintenance,+234-811-5066,Green Solutions Ltd.,3.8
+153,EV Charging Station 153,EV Charging Station,This is a eco-business located at Broadway,224 Highland Ave,Kano,54917,2.482243,4.055842,Out of Service,+234-778-3238,Sustainability Hub,3.9
+154,Recycling Bin 154,E-bike Station,This is a e-bike station located at Market St,810 Highland Ave,Kano,41015,-0.141457,3.45281,Out of Service,+234-701-3207,Sustainability Hub,3.5
+155,Eco-business 155,E-bike Station,This is a ev charging station located at Broadway,614 Main St,Kano,52217,6.037435,4.33786,Out of Service,+234-897-4480,Sustainability Hub,5.0
+156,E-bike Station 156,E-bike Station,This is a e-bike station located at Market St,342 Market St,Abuja,15635,1.316582,7.235012,Out of Service,+234-855-4015,Green Solutions Ltd.,3.7
+157,Recycling Bin 157,Eco-business,This is a solar panel station located at Main St,781 Main St,Lagos,64299,-0.343135,7.016393,Operational,+234-722-8918,EcoSave Corp.,4.1
+158,EV Charging Station 158,EV Charging Station,This is a eco-business located at Broadway,632 Market St,Abuja,57447,5.943467,7.871589,Under Maintenance,+234-780-1184,Eco Future Inc.,4.2
+159,Solar Panel Station 159,Eco-business,This is a recycling bin located at Broadway,738 Market St,Ibadan,53140,-0.962346,4.970824,Under Maintenance,+234-777-9894,Green Solutions Ltd.,3.1
+160,Eco-business 160,E-bike Station,This is a eco-business located at Main St,725 Highland Ave,Abuja,30380,-0.591127,5.388228,Out of Service,+234-708-7166,Eco Future Inc.,3.8
+161,Solar Panel Station 161,E-bike Station,This is a recycling bin located at Broadway,543 Broadway,Port Harcourt,16331,2.341547,6.709044,Operational,+234-776-6306,Sustainability Hub,3.4
+162,E-bike Station 162,EV Charging Station,This is a e-bike station located at Highland Ave,498 Highland Ave,Ibadan,96057,6.208162,7.013946,Operational,+234-825-3417,Green Solutions Ltd.,4.0
+163,Eco-business 163,EV Charging Station,This is a ev charging station located at Main St,924 Sunset Blvd,Lagos,89614,6.027342,4.127904,Under Maintenance,+234-888-5292,Eco Future Inc.,4.8
+164,Eco-business 164,Recycling Bin,This is a e-bike station located at Broadway,225 Broadway,Port Harcourt,90137,-0.567967,7.564792,Operational,+234-838-2504,EcoSave Corp.,4.9
+165,EV Charging Station 165,Eco-business,This is a ev charging station located at Market St,664 Market St,Ibadan,81588,5.744313,4.708924,Under Maintenance,+234-897-9892,Eco Future Inc.,4.2
+166,Recycling Bin 166,E-bike Station,This is a eco-business located at Broadway,852 Market St,Port Harcourt,55686,1.393088,5.330478,Operational,+234-856-7557,EcoSave Corp.,3.3
+167,E-bike Station 167,EV Charging Station,This is a eco-business located at Market St,566 Broadway,Port Harcourt,46898,5.567087,6.05929,Operational,+234-891-7235,EcoSave Corp.,4.3
+168,Recycling Bin 168,EV Charging Station,This is a ev charging station located at Market St,654 Market St,Kano,11830,0.688221,4.993066,Out of Service,+234-865-8912,Green Solutions Ltd.,3.8
+169,Eco-business 169,E-bike Station,This is a solar panel station located at Main St,200 Main St,Ibadan,39900,2.083392,4.685955,Out of Service,+234-740-9182,Eco Future Inc.,4.3
+170,EV Charging Station 170,Recycling Bin,This is a eco-business located at Sunset Blvd,561 Highland Ave,Ibadan,23555,-0.669886,4.22284,Under Maintenance,+234-734-9718,Sustainability Hub,4.7
+171,Solar Panel Station 171,Recycling Bin,This is a e-bike station located at Highland Ave,249 Market St,Kano,44622,6.117921,4.536843,Out of Service,+234-711-3455,Green Solutions Ltd.,3.3
+172,E-bike Station 172,Eco-business,This is a ev charging station located at Main St,417 Main St,Port Harcourt,11609,3.374142,4.658997,Under Maintenance,+234-795-6483,Sustainability Hub,4.7
+173,E-bike Station 173,Eco-business,This is a ev charging station located at Market St,180 Broadway,Lagos,17462,1.202718,7.98381,Under Maintenance,+234-760-8425,EcoSave Corp.,4.5
+174,Recycling Bin 174,EV Charging Station,This is a ev charging station located at Main St,290 Market St,Kano,24420,2.729025,3.47118,Operational,+234-813-7361,EcoSave Corp.,4.6
+175,Eco-business 175,Eco-business,This is a solar panel station located at Main St,306 Market St,Lagos,57528,3.109307,4.890679,Out of Service,+234-726-6513,Eco Future Inc.,3.2
+176,Recycling Bin 176,E-bike Station,This is a ev charging station located at Market St,199 Sunset Blvd,Kano,21434,1.025168,7.84299,Out of Service,+234-850-7254,Eco Future Inc.,3.4
+177,EV Charging Station 177,E-bike Station,This is a ev charging station located at Highland Ave,204 Broadway,Port Harcourt,63906,-1.250408,7.913103,Operational,+234-860-2075,Sustainability Hub,4.7
+178,EV Charging Station 178,Eco-business,This is a ev charging station located at Highland Ave,768 Sunset Blvd,Kano,92241,5.615035,6.36664,Under Maintenance,+234-788-5708,GreenTech Co.,4.5
+179,Solar Panel Station 179,EV Charging Station,This is a eco-business located at Market St,603 Highland Ave,Ibadan,54731,0.478821,4.187679,Out of Service,+234-879-4870,EcoSave Corp.,3.1
+180,Eco-business 180,Eco-business,This is a e-bike station located at Sunset Blvd,325 Broadway,Ibadan,31172,-1.065318,7.679623,Under Maintenance,+234-788-3987,Sustainability Hub,3.6
+181,E-bike Station 181,Solar Panel Station,This is a solar panel station located at Market St,507 Broadway,Abuja,96608,-0.885506,3.487778,Out of Service,+234-824-1750,Sustainability Hub,4.7
+182,Eco-business 182,Solar Panel Station,This is a solar panel station located at Sunset Blvd,337 Highland Ave,Ibadan,43570,1.25507,7.138819,Out of Service,+234-748-2421,EcoSave Corp.,3.6
+183,Eco-business 183,E-bike Station,This is a eco-business located at Highland Ave,779 Highland Ave,Abuja,35492,4.774359,3.629659,Out of Service,+234-708-2854,GreenTech Co.,4.5
+184,EV Charging Station 184,EV Charging Station,This is a eco-business located at Market St,427 Market St,Lagos,11584,2.784388,3.878092,Operational,+234-783-1118,Green Solutions Ltd.,3.3
+185,Eco-business 185,Eco-business,This is a ev charging station located at Highland Ave,717 Sunset Blvd,Lagos,27054,0.07716,7.057528,Under Maintenance,+234-881-4786,Eco Future Inc.,3.1
+186,EV Charging Station 186,Eco-business,This is a ev charging station located at Highland Ave,889 Broadway,Lagos,69673,-0.793113,6.630397,Under Maintenance,+234-710-6898,GreenTech Co.,3.7
+187,Recycling Bin 187,Eco-business,This is a solar panel station located at Highland Ave,908 Highland Ave,Kano,48076,1.980585,4.576071,Out of Service,+234-724-6078,EcoSave Corp.,3.6
+188,EV Charging Station 188,Recycling Bin,This is a e-bike station located at Highland Ave,408 Sunset Blvd,Kano,97190,0.057856,7.65071,Out of Service,+234-780-4387,EcoSave Corp.,3.9
+189,Recycling Bin 189,Eco-business,This is a recycling bin located at Market St,515 Main St,Port Harcourt,62259,5.052053,7.489807,Under Maintenance,+234-798-9593,Eco Future Inc.,3.3
+190,Recycling Bin 190,Solar Panel Station,This is a recycling bin located at Main St,191 Main St,Kano,60655,-0.21134,4.952873,Under Maintenance,+234-838-2443,EcoSave Corp.,3.2
+191,Eco-business 191,E-bike Station,This is a e-bike station located at Sunset Blvd,781 Broadway,Ibadan,81323,5.82306,6.962863,Operational,+234-858-4079,Sustainability Hub,4.6
+192,E-bike Station 192,Solar Panel Station,This is a e-bike station located at Market St,257 Broadway,Ibadan,98955,3.310933,6.426945,Under Maintenance,+234-828-2905,EcoSave Corp.,3.9
+193,Eco-business 193,E-bike Station,This is a e-bike station located at Broadway,288 Highland Ave,Kano,61919,-0.043925,4.353561,Under Maintenance,+234-812-5616,EcoSave Corp.,3.2
+194,Solar Panel Station 194,Solar Panel Station,This is a ev charging station located at Market St,352 Sunset Blvd,Port Harcourt,92332,5.378151,6.014046,Under Maintenance,+234-898-4615,GreenTech Co.,3.7
+195,Eco-business 195,Solar Panel Station,This is a ev charging station located at Market St,758 Sunset Blvd,Lagos,35526,2.538316,6.434027,Under Maintenance,+234-809-2203,Eco Future Inc.,3.7
+196,EV Charging Station 196,Recycling Bin,This is a e-bike station located at Broadway,356 Sunset Blvd,Ibadan,85049,2.92458,7.917089,Operational,+234-759-7991,Green Solutions Ltd.,3.4
+197,Eco-business 197,E-bike Station,This is a ev charging station located at Main St,619 Main St,Port Harcourt,16080,1.94198,7.381909,Under Maintenance,+234-782-6813,Sustainability Hub,3.2
+198,EV Charging Station 198,Recycling Bin,This is a e-bike station located at Market St,544 Market St,Kano,46832,6.216792,3.331472,Under Maintenance,+234-865-6533,Eco Future Inc.,3.3
+199,EV Charging Station 199,EV Charging Station,This is a eco-business located at Broadway,547 Market St,Lagos,22816,1.101252,4.56411,Operational,+234-770-8706,Green Solutions Ltd.,4.4
+200,Recycling Bin 200,E-bike Station,This is a solar panel station located at Broadway,901 Highland Ave,Lagos,91000,4.203401,5.760542,Under Maintenance,+234-818-6196,Green Solutions Ltd.,3.5
