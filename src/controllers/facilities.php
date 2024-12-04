@@ -19,6 +19,9 @@ public $facilitymodel;
     public function view()
     {
 
+
+        echo "text";
+
         $page = $_GET['page'] ?? 1;  // Retrieves 'John'
      
 

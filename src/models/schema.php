@@ -30,10 +30,10 @@ $facilitymodel = new Facility(
 ;
 $userschema = [
     
-    "userType"=>"TEXT UNIQUE NOT NULL",
-    "username"=>"TEXT",
+    "userType"=>'VARCHAR(50)  DEFAULT "user" ',
+    "username"=>"VARCHAR(50) NOT NULL UNIQUE",
     "password"=>"TEXT",
-    "loggedin"=>"BOOLEAN DEFAULT false",
+    "loggedin"=>"BOOLEAN DEFAULT false"
 
 
 ];

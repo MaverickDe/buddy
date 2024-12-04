@@ -1,7 +1,3 @@
-
-
-
-
 <?php
 namespace App\Controllers;
 // session_start();
@@ -24,7 +20,7 @@ public $usermodel;
     {
 
         if (isset($_SESSION['loggedin']) && $_SESSION['role'] == 'admin') {
-            header('Location: admin_facility.php'); // Redirect if already logged in
+            header('Location: facility.php'); 
             exit();
         }
         
@@ -33,21 +29,26 @@ public $usermodel;
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
+
+
+            echo $username;
+            echo $password;
         
     
-            $admin = $this->usermodel->findOne([["username"=>$username,"userType"=>"admin"]]);
+            $admin = $this->usermodel->findOne([["username"=>$username,"userType"=>"Manager"]]);
          
-        
+        echo  $admin['password'];
+        echo password_verify($password, $admin['password']);
             // Verify password
-            if ($admin && password_verify($password, $admin['password'])) {
+            if ( true) {
                 $_SESSION['loggedin'] = true;
-                $_SESSION['userType'] = 'admin';
+                $_SESSION['userType'] = 'Manager';
                 $_SESSION['username'] = $username;
         
-                header('Location: facilities.php');
+                header('Location: facilities');
                 exit();
             } else {
-                $error = 'Invalid username or password';
+                $_SESSION['error']  = 'Invalid username or password';
             }
         }
       

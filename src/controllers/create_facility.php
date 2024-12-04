@@ -1,9 +1,7 @@
-
-
-
 <?php
+
 namespace App\Controllers;
-// session_start();
+
 
 require_once  __DIR__  .'/control.php';
 
@@ -68,4 +66,7 @@ public $facilitymodel;
         
         $this->render('facilities');
     }
-}?>
+}
+
+
+?>

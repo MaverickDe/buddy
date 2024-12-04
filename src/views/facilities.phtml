@@ -81,17 +81,37 @@
 <body>
     <header>
         <h1>ecoBuddy - Local Eco-Facilities</h1>
+        <nav>
+        <?php
+
+if (isset($_SESSION['loggedin'])) {
+
+
+   echo " <a href='/ecobuddy/logout'>logout</a>";
+}
+else{
+
+  echo"  <a href='/ecobuddy/adminlogin'>admin login</a>";
+
+
+}
+
+?> 
+
+
+
+        </nav>
     </header>
     <?php
-session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['role'] != 'admin') {
+
+if (isset($_SESSION['loggedin']) && $_SESSION['userType'] == 'Manager') {
     // header('Location: login.php'); // Redirect non-admin users
     // exit();
 
 
    echo " <h2>Manage Facilities</h2>" ;
     
-     echo "   <section>" ;
+     echo "   <section >" ;
              echo "      <h3>Add New Facility</h3>" ;
              echo "      <form action='create_facility.php' method='POST'>" ;
                 echo "       <input type='text' name='title' placeholder='Title' required>" ;
