@@ -1,18 +1,36 @@
 <?php
 namespace App\Controllers;
-require_once  __DIR__  .'/../models/schema.php';
+// session_start();
+
 require_once  __DIR__  .'/control.php';
 
 use App\Controller;
 
-class FacilitiesController extends Controller
+
+class FacilitiesController  extends Controller
 {
-    public function index()
+public $facilitymodel;
+
+   public function __construct(){
+        require_once  __DIR__."/../models/schema.php";
+        $this->facilitymodel=$facilitymodel;
+    }
+
+    public function view()
     {
 
-        // $facilitymodel->test();
-        echo $facilitymodel;
+        $page = $_GET['page'] ?? 1;  // Retrieves 'John'
+     
 
+
+       $facilities =  $this->facilitymodel->find([[],$page]);
+       $_SESSION['facilities'] = $facilities;
+       $_SESSION['page'] =       $page;
+        
+  
+        
+        
+        
         $this->render('facilities');
     }
 }?>

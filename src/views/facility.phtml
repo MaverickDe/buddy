@@ -1,18 +1,8 @@
 <?php
-// facility.php
-session_start();
 
-// Include database connection and functions
-require_once 'config/db.php';  // Adjust the path as needed
-require_once 'models/Facility.php';  // Facility model to fetch data
+$facility = $_SESSION["facility"]
 
-// Fetch facility details based on the provided ID in the URL
-if (isset($_GET['id'])) {
-    $facilityId = $_GET['id'];
-    $facility = Facility::getFacilityById($facilityId);  // Assuming a method exists to get facility data
-} else {
-    die("Facility ID not provided.");
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +11,13 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($facility['title']); ?> - Facility Details</title>
-    <link rel="stylesheet" href="styles/style.css"> <!-- Add your CSS file -->
+    <link rel="stylesheet" href="public/styles/facility.css"/>
+    <link rel="stylesheet" href="public/styles/styles.css"/>
 </head>
 <body>
+<header>
+        <h1>ecoBuddy - Local Eco-Facilities</h1>
+    </header>
     <div class="container">
         <h1><?php echo htmlspecialchars($facility['title']); ?></h1>
         <p><strong>Category:</strong> <?php echo htmlspecialchars($facility['category']); ?></p>
@@ -31,6 +25,10 @@ if (isset($_GET['id'])) {
         <p><strong>Location:</strong> <?php echo htmlspecialchars($facility['address']); ?></p>
         <p><strong>Status:</strong> <?php echo htmlspecialchars($facility['status']); ?></p>
         <img src="<?php echo htmlspecialchars($facility['photo']); ?>" alt="Facility Image" class="facility-image">
+        
+
+
+
         
         <?php if (isset($_SESSION['user_id'])): ?>
             <form action="mark_visited.php" method="post">

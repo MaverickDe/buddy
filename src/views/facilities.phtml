@@ -39,7 +39,8 @@
         .facility {
             border-bottom: 1px solid #ddd;
             padding: 15px 0;
-            display: none; /* Hidden initially for pagination */
+            text-decoration: "none";
+            display: block;
         }
         .facility:last-child {
             border-bottom: none;
@@ -93,8 +94,41 @@
         </div>
 
         <!-- Facilities List -->
+
         <div id="facilitiesList">
+    <?php 
+    
+    // session_start();
+
+    $facilities = $_SESSION['facilities'];
+    // echo "helooooooo";
+
+    // echo count($facilities);
+    foreach ($facilities as $facility) {
+        // $currentURL = parse_url( $_SERVER['REQUEST_URI'],PHP_URL_PATH);
+        // echo "<li>" . htmlspecialchars($fruit) . "</li>";
+        
+        
+        $currentURL = "/ecobuddy/facility/?id={$facility['id']}";
+        // echo $facility;
+
+
+        
+           echo "  <a  href={$currentURL} class='facility' data-category='Recycling'>";
+               echo "   <h3> ". htmlspecialchars($facility["title"]) ." </h3>";
+              echo "     <p><strong>Category:</strong> " . htmlspecialchars($facility["category"]) . "</p>";
+                echo "   <p><strong>Location:</strong>" . htmlspecialchars($facility["address"]) ."</p>";
+             echo '   </a>';
+        
+      
+
+    }
+    
+    ?>
             <!-- Add multiple facility items here -->
+
+
+<!-- 
             <div class="facility" data-category="Recycling">
                 <h3>City Center Recycling Bin</h3>
                 <p><strong>Category:</strong> Recycling</p>
@@ -111,20 +145,58 @@
                 <h3>EcoMart Organic Store</h3>
                 <p><strong>Category:</strong> Eco-Business</p>
                 <p><strong>Location:</strong> 789 Eco Street</p>
-            </div>
+            </div> -->
 
             <!-- Add more facilities to test pagination -->
         </div>
 
         <!-- Pagination Controls -->
         <div class="pagination" id="paginationControls">
-            <button id="prevBtn" onclick="changePage(-1)" disabled>Previous</button>
+
+        <?php
+
+        require_once __DIR__."/../helpers/const.php";
+                  $facilities = $_SESSION['facilities'];
+          $page = $_SESSION['page'];
+          $nextpage = $page+1;
+        
+          $prevpage = $page-1;
+        //   $ = $_SESSION['facilities'];
+        $currentURL = parse_url( $_SERVER['REQUEST_URI'],PHP_URL_PATH);
+      
+    
+
+
+          if($page<=1){
+             echo "<a id='prevBtn' href = '{$currentURL}?page=1'
+             >Previous</a>";
+
+          }else{
+
+             echo "<a id='prevBtn' href = '{$currentURL}?page={$prevpage}'
+             >Previous</a>";
+
+          }
+
+          if(count($facilities)> 10){
+
+            echo "<a id='nextBtn' href = '{$currentURL}?page={$nextpage}'>Next</a>";
+
+          }else{
+ echo "<a id='nextBtn' href = '{$currentURL}?page={$page}'
+             >Next</a>";
+          }
+        
+        
+        
+        ?>
+           
             <span id="pageNumbers"></span>
-            <button id="nextBtn" onclick="changePage(1)">Next</button>
+            <!-- <button id="nextBtn" onclick="changePage(1)">Next</button> -->
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         const facilitiesPerPage = 2;
         let currentPage = 1;
         const facilities = document.querySelectorAll('.facility');
@@ -163,6 +235,6 @@
 
         // Initialize pagination on page load
         window.onload = () => showPage(currentPage);
-    </script>
+    </script> -->
 </body>
 </html>
