@@ -23,10 +23,18 @@ public $facilitymodel;
         echo "text";
 
         $page = $_GET['page'] ?? 1;  // Retrieves 'John'
-     
+
+        $conditions = [];
+        foreach ($_GET as $key => $value) {
+            // $conditions[] = " $key = :$key "; 
+            if(trim($value) !=="" && trim($key)!="page"){
+                $conditions[$key] = $value; 
+
+            }
+        }
 
 
-       $facilities =  $this->facilitymodel->find([[],$page]);
+       $facilities =  $this->facilitymodel->find([$conditions,$page]);
        $_SESSION['facilities'] = $facilities;
        $_SESSION['page'] =       $page;
         

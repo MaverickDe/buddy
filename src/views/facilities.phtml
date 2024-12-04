@@ -144,13 +144,23 @@ if (isset($_SESSION['loggedin']) && $_SESSION['userType'] == 'Manager') {
 
     <div class="container">
         <div class="search-filter">
-            <input type="text" id="searchInput" placeholder="Search by name or location..." onkeyup="filterFacilities()">
-            <select id="categoryFilter" onchange="filterFacilities()">
-                <option value="">All Categories</option>
-                <option value="Recycling">Recycling</option>
-                <option value="EV Charging">EV Charging</option>
-                <option value="Eco-Business">Eco-Business</option>
-            </select>
+        <form action="/ecobuddy/facilities" method="GET">
+
+                <input type="text" id="searchInput" placeholder="title..." name="title">
+                <input type="text" id="searchInput" placeholder="postal_code" name="postel_code">
+                <input type="text" id="searchInput" placeholder="address..." name="address">
+                <input type="text" id="searchInput" placeholder="city..." name="city">
+                <input type="text" id="searchInput" placeholder="category..." name="category">
+                <!-- <select id="categoryFilter" onchange="filterFacilities()">
+                    <option value="">All Categories</option>
+                    <option value="Recycling">Recycling</option>
+                    <option value="EV Charging">EV Charging</option>
+                    <option value="Eco-Business">Eco-Business</option>
+                </select> -->
+
+                <input type="submit" />
+
+            </form>
         </div>
 
         <!-- Facilities List -->
