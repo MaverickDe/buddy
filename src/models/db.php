@@ -122,7 +122,9 @@ echo  $sql;
 
 
     }
-public function findOne($data)
+
+
+    public function findOne($data)
 {
 require_once __DIR__."/../helpers/const.php";
         
@@ -172,6 +174,72 @@ try {
     // echo $row;
 
     return $row;
+} catch (PDOException $e) {
+    echo "Database error: " . $e->getMessage();
+}
+
+
+
+    }
+    public function create($data)
+{
+require_once __DIR__."/../helpers/const.php";
+        
+// Input array with multiple key-value pairs
+
+// [$filters  ] = $data;
+// $filters = [
+//     "category" => "recycling"
+   
+// ];
+
+try {
+
+
+    $sql = "INSERT INTO  {$this->tbname}  ";
+
+ 
+
+    // Dynamically build the WHERE clause with placeholders
+    $conditions = [];
+    foreach ($data as $key => $value) {
+        $conditions[] = " $key = :$key "; // Creates 'column = :column' for each filter
+    }  
+    $sql .=  " ( "  . implode(" , ", $conditions)  . " ) ";
+    if(count($data) >0){
+        $sql.="VALUES";
+    }
+    
+    $conditionsdata = [];
+    foreach ($data as $key => $value) {
+        $conditionsdata[] = " $key = :$key "; // Creates 'column = :column' for each filter
+    }  
+    $sql .=  " ( "  . implode(" , ", $conditionsdata)  . " ) ";
+
+
+// echo $sql;
+    // Prepare the statement
+    $stmt = $this->db->prepare($sql);
+
+    // Bind each value to its placeholder
+    foreach ($filters as $key => $value) {
+        $stmt->bindValue(":$key", $value); // Binds the value securely
+    }
+
+  
+// echo  $sql;
+    // Execute the query
+    $stmt->execute();
+
+    // Fetch and display the results
+    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    //     echo($row); // Replace with formatted output if needed
+    // }
+
+    // $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    // echo $row;
+
+    // return $row;
 } catch (PDOException $e) {
     echo "Database error: " . $e->getMessage();
 }

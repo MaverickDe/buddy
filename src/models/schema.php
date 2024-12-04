@@ -2,7 +2,8 @@
 
 // title, category,description,adress,city,postal_code,latitude,longitude,status,manager
 require_once __DIR__."/facility.php";
-echo "test";
+require_once __DIR__."/user.php";
+
 // namespace App\model\schema;
 $facilityschema = [
     
@@ -25,6 +26,23 @@ $facilitymodel = new Facility(
     $facilityschema
     
     ,"facility");
+
+;
+$userschema = [
+    
+    "userType"=>"TEXT UNIQUE NOT NULL",
+    "username"=>"TEXT",
+    "password"=>"TEXT",
+    "loggedin"=>"BOOLEAN DEFAULT false",
+
+
+];
+
+$usermodel = new User(
+    
+    $userschema
+    
+    ,"user");
 
 ;
 

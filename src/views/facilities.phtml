@@ -82,6 +82,35 @@
     <header>
         <h1>ecoBuddy - Local Eco-Facilities</h1>
     </header>
+    <?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['role'] != 'admin') {
+    // header('Location: login.php'); // Redirect non-admin users
+    // exit();
+
+
+   echo " <h2>Manage Facilities</h2>" ;
+    
+     echo "   <section>" ;
+             echo "      <h3>Add New Facility</h3>" ;
+             echo "      <form action='create_facility.php' method='POST'>" ;
+                echo "       <input type='text' name='title' placeholder='Title' required>" ;
+               echo "        <input type='text' name='category' placeholder='Category' required>" ;
+               echo "        <textarea name='description' placeholder='Description' required></textarea>" ;
+                echo "      <input type='text' name='address' placeholder='Address' required>" ;
+                 echo "      <button type='submit'>Add Facility</button>" ;
+             echo "      </form>" ;
+         echo "      </section>" ;
+}
+?>
+
+
+
+
+
+
+
+
     <div class="container">
         <div class="search-filter">
             <input type="text" id="searchInput" placeholder="Search by name or location..." onkeyup="filterFacilities()">
