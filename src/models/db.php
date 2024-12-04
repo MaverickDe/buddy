@@ -35,9 +35,9 @@ private function createTable(){
 
     $conditions = [];
     foreach ($this->schema as $key => $value) {
-        $conditions[] = "$key  {$this->schema[$key]}"; // Creates 'column = :column' for each filter
+        $conditions[] = "$key  {$this->schema[$key]}"; 
     }
- $sql = implode(" , ", $conditions); // Combine conditions with AND
+ $sql = implode(" , ", $conditions); 
 
     $sqlcreate = "CREATE TABLE IF NOT EXISTS {$this->tbname} (
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -52,64 +52,48 @@ $this->db->exec($sqlcreate);
 public function find($data)
 {
 require_once __DIR__."/../helpers/const.php";
-        
-// Input array with multiple key-value pairs
+
 
 [$filters , $page ] = $data;
-// $filters = [
-//     "category" => "recycling",
-//     "status" => "active",
-//     "location" => "downtown"
-// ];
+
 
 try {
 
     $offset =  ($page -1)* $PERPAGE;
     $limit = $PERPAGE + $PERADDEDPAGE;
 
-    // echo ($offset);
-    // echo ($offset);
-    // echo ($limit);
-    // echo ($page);
-    // Connect to the database
-    // $pdo = new PDO('sqlite:ecoBuddy.db'); // Replace with your actual database
-    // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Create the base SQL query
     $sql = "SELECT * FROM {$this->tbname}  ";
 
     if(count($filters)){
         $sql.="WHERE";
     }
 
-    // Dynamically build the WHERE clause with placeholders
     $conditions = [];
     foreach ($filters as $key => $value) {
-        $conditions[] = " $key = :$key "; // Creates 'column = :column' for each filter
+        $conditions[] = " $key = :$key "; 
     }
-    $sql .= implode(" AND ", $conditions); // Combine conditions with AND
+    $sql .= implode(" AND ", $conditions); 
+    $sql .= " ORDER BY id DESC ";
        $sql .= " LIMIT :limit OFFSET :offset";
 
 
-    // Prepare the statement
+
     $stmt = $this->db->prepare($sql);
 
-    // Bind each value to its placeholder
+  
     foreach ($filters as $key => $value) {
-        $stmt->bindValue(":$key", $value); // Binds the value securely
+        $stmt->bindValue(":$key", $value); 
     }
 
     $stmt->bindValue(":limit", $limit, PDO::PARAM_INT);
     $stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
 
 echo  $sql;
-    // Execute the query
+
     $stmt->execute();
 
-    // Fetch and display the results
-    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    //     echo($row); // Replace with formatted output if needed
-    // }
+
 
     $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // echo $row;
@@ -128,7 +112,7 @@ echo  $sql;
 {
 require_once __DIR__."/../helpers/const.php";
         
-// Input array with multiple key-value pairs
+
 
 [$filters  ] = $data;
 // $filters = [
@@ -145,37 +129,29 @@ try {
         $sql.="WHERE";
     }
 
-    // Dynamically build the WHERE clause with placeholders
+ 
     $conditions = [];
     foreach ($filters as $key => $value) {
-        $conditions[] = " $key = :$key "; // Creates 'column = :column' for each filter
+        $conditions[] = " $key = :$key "; 
     }  
     $sql .= implode(" AND ", $conditions); 
-// echo $sql;
-    // Prepare the statement
+
     $stmt = $this->db->prepare($sql);
 
-    // Bind each value to its placeholder
+
     foreach ($filters as $key => $value) {
-        $stmt->bindValue(":$key", $value); // Binds the value securely
+        $stmt->bindValue(":$key", $value); 
     }
 
-  
-// echo  $sql;
-    // Execute the query
     $stmt->execute();
 
-    // Fetch and display the results
-    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    //     echo($row); // Replace with formatted output if needed
-    // }
-
+   
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     // echo $row;
 
     return $row;
 } catch (PDOException $e) {
-    echo "Database error: " . $e->getMessage();
+    // echo "Database error: " . $e->getMessage();
 }
 
 
@@ -203,7 +179,7 @@ try {
     // Dynamically build the WHERE clause with placeholders
     $conditions = [];
     foreach ($data as $key => $value) {
-        $conditions[] = " $key = :$key "; // Creates 'column = :column' for each filter
+        $conditions[] = " $key "; // Creates 'column = :column' for each filter
     }  
     $sql .=  " ( "  . implode(" , ", $conditions)  . " ) ";
     if(count($data) >0){
@@ -212,36 +188,123 @@ try {
     
     $conditionsdata = [];
     foreach ($data as $key => $value) {
-        $conditionsdata[] = " $key = :$key "; // Creates 'column = :column' for each filter
+        $conditionsdata[] = "  :$key "; // Creates 'column = :column' for each filter
     }  
     $sql .=  " ( "  . implode(" , ", $conditionsdata)  . " ) ";
 
 
-// echo $sql;
-    // Prepare the statement
     $stmt = $this->db->prepare($sql);
 
-    // Bind each value to its placeholder
-    foreach ($filters as $key => $value) {
+    foreach ($data as $key => $value) {
+        $stmt->bindValue(":$key", $value); 
+    }
+
+
+    $stmt->execute();
+
+
+} catch (PDOException $e) {
+    // echo "Database error: " . $e->getMessage();
+}
+
+
+
+    }
+    public function delete($data)
+{
+require_once __DIR__."/../helpers/const.php";
+        
+
+
+try {
+
+    $sql = "DELETE FROM {$this->tbname} ";
+
+
+
+ 
+
+    // Dynamically build the WHERE clause with placeholders
+    if(count($data) >0){
+        $sql.="WHERE";
+    }
+    $conditions = [];
+    foreach ($data as $key => $value) {
+        $conditions[] = " $key = :$key "; // Creates 'column = :column' for each filter
+    }  
+    $sql .=  implode(" AND ", $conditions)  ;
+    
+
+    $stmt = $this->db->prepare($sql);
+
+
+    foreach ($data as $key => $value) {
+        $stmt->bindValue(":$key", $value); 
+    }
+
+  
+
+    $stmt->execute();
+
+} catch (PDOException $e) {
+    // echo "Database error: " . $e->getMessage();
+}
+
+
+
+    }
+    public function update($data)
+{
+require_once __DIR__."/../helpers/const.php";
+        
+
+
+[$values, $filter  ] = $data;
+
+
+
+
+try {
+
+    $sql = "UPDATE  {$this->tbname} SET ";
+
+
+
+ 
+
+    // Dynamically build the WHERE clause with placeholders
+
+    $conditions = [];
+    foreach ($values as $key => $value) {
+        $conditions[] = " $key = :val$key "; // Creates 'column = :column' for each filter
+    }  
+    $sql .=  implode(" , ", $conditions)  ;
+    $sql .=  " WHERE "  ;
+    $conditionsdata = [];
+    foreach ($filter as $key => $value) {
+        $conditionsdata[] = " $key = :$key "; // Creates 'column = :column' for each filter
+    }  
+    $sql .=  implode(" , ", $conditionsdata)  ;
+    
+
+
+    $stmt = $this->db->prepare($sql);
+
+  
+    foreach ($values as $key => $value) {
+        $stmt->bindValue(":val$key", $value); // Binds the value securely
+    }
+    foreach ($filter as $key => $value) {
         $stmt->bindValue(":$key", $value); // Binds the value securely
     }
 
   
-// echo  $sql;
-    // Execute the query
+
     $stmt->execute();
 
-    // Fetch and display the results
-    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    //     echo($row); // Replace with formatted output if needed
-    // }
-
-    // $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    // echo $row;
-
-    // return $row;
+ 
 } catch (PDOException $e) {
-    echo "Database error: " . $e->getMessage();
+    // echo "Database error: " . $e->getMessage();
 }
 
 
@@ -256,13 +319,6 @@ try {
 
 
 
-    //
 
-    //delete
-
-    //create
-
-
-    //update
 }
 ?>

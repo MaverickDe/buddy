@@ -1,0 +1,56 @@
+<?php
+// Database connection
+
+
+// Check connection
+
+
+// Handling the CRUD operations
+
+// Create operation - Adding a new facility
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage EcoFacilities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Manage EcoFacilities</h1>
+    
+    <!-- Add New Facility Form -->
+    <h2>Update Facility</h2>
+    <form method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="
+
+    <?php
+    echo $_GET['id'];
+    
+    ?>
+    
+    
+    ">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="category" placeholder="Category" required>
+        <textarea name="description" placeholder="Description" required></textarea>
+        <!-- <input type="text" name="location" placeholder="Location" required> -->
+        <input type="text" name="latitude" placeholder="Latitude" required>
+        <input type="text" name="longitude" placeholder="Longitude" required>
+        <input type="text" name="status" placeholder="Status" required>
+        <!-- <input type="file" name="photo"> -->
+        <button type="submit" >Update Facility</button>
+    </form>
+
+    <!-- Display Facilities -->
+
+</body>
+</html>
+
+<?php
+// Close connection
+
+?>
