@@ -16,19 +16,18 @@ public function __construct(     $schema,$tbname)
 public function inserttestdata(){
     try {
       
-        
-        // Path to the CSV file
+     
         $csvFile =  __DIR__."/../testdata/ecofacilities_data.csv";
     
-        // Open the CSV file for reading
+   
         if (($handle = fopen($csvFile, 'r')) !== false) {
-            // Read the header row (optional, depending on CSV format)
+       
             $header = fgetcsv($handle, 1000, ',');
             
-            // Prepare the SQL statement (modify according to your table structure)
+       
             $stmt = $this->db->prepare("INSERT INTO {$this->tbname} (title, category,description,address,city,postal_code,latitude,longitude,status,manager) VALUES (?, ?, ?,?,?,?,?,?,?,?)");
     
-            // Loop through the CSV rows and insert into the database
+         
             while (($row = fgetcsv($handle, 1000, ',')) !== false) {
                 $stmt->execute([
                     $row[1], $row[2], $row[3],
@@ -38,11 +37,10 @@ public function inserttestdata(){
             
             ]);
             }
-            
-            // Close the file
+     
             fclose($handle);
             
-            echo "Data successfully inserted!";
+            // echo "Data successfully inserted!";
         } else {
             echo "Error opening the file.";
         }

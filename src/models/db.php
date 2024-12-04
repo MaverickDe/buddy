@@ -13,8 +13,9 @@ class DB {
         $schema,$tbname
     ) {
     
-
-        $this->db = new PDO('mysql:host=localhost;dbname=ecoBuddy', 'root', '12345678');
+        $databaseFile = __DIR__ . '/ecoBuddy.db';
+        // $this->db = new PDO('mysql:host=localhost;dbname=ecoBuddy', 'root', '12345678');
+        $this->db =  $db = new PDO("sqlite:$databaseFile");;
         $this->schema = $schema;
         $this->tbname = $tbname;
         // $this->$db = new PDO('mysql:host=localhost;dbname=ecoBuddy', 'username', 'password');
@@ -40,7 +41,7 @@ private function createTable(){
  $sql = implode(" , ", $conditions); 
 
     $sqlcreate = "CREATE TABLE IF NOT EXISTS {$this->tbname} (
-        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
     {$sql})";
 
     // echo $sqlcreate;
@@ -224,13 +225,13 @@ try {
 
  
 
-    // Dynamically build the WHERE clause with placeholders
+   
     if(count($data) >0){
         $sql.="WHERE";
     }
     $conditions = [];
     foreach ($data as $key => $value) {
-        $conditions[] = " $key = :$key "; // Creates 'column = :column' for each filter
+        $conditions[] = " $key = :$key "; 
     }  
     $sql .=  implode(" AND ", $conditions)  ;
     
