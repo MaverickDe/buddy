@@ -1,15 +1,4 @@
-<?php
-// Database connection
 
-
-// Check connection
-
-
-// Handling the CRUD operations
-
-// Create operation - Adding a new facility
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,40 +6,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Manage EcoFacilities</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .mark-visited {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .mark-visited:hover {
+            background-color: #c0392b;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Manage EcoFacilities</h1>
-    
-    <!-- Add New Facility Form -->
-    <h2>Update Facility</h2>
-    <form method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="
+    <div class="container">
+        <h1>Manage EcoFacilities</h1>
+        
+        <h2>Update Facility</h2>
 
-    <?php
-    echo $_GET['id'];
-    
-    ?>
-    
-    
-    ">
-        <input type="text" name="title" placeholder="Title" required>
-        <input type="text" name="category" placeholder="Category" required>
-        <textarea name="description" placeholder="Description" required></textarea>
-        <!-- <input type="text" name="location" placeholder="Location" required> -->
-        <input type="text" name="latitude" placeholder="Latitude" required>
-        <input type="text" name="longitude" placeholder="Longitude" required>
-        <input type="text" name="status" placeholder="Status" required>
-        <!-- <input type="file" name="photo"> -->
-        <button type="submit" >Update Facility</button>
-    </form>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($_GET['id']); ?>">
 
-    <!-- Display Facilities -->
+            <?php if (isset($_SESSION['userType']) && $_SESSION['userType'] == 'Manager'): ?>
+                <!-- <button type="submit" class="mark-visited" formaction="mark_visited.php">Mark as Visited</button> -->
+                
+                <input type="text" name="title" placeholder="Title" required>
+                <input type="text" name="category" placeholder="Category" required>
+                <textarea name="description" placeholder="Description" required></textarea>
+                <input type="text" name="latitude" placeholder="Latitude" required>
+                <input type="text" name="longitude" placeholder="Longitude" required>
+            <?php endif; ?>
 
+            <input type="text" name="status" placeholder="Status" required>
+            <button type="submit">Update Facility</button>
+        </form>
+    </div>
 </body>
 </html>
-
-<?php
-// Close connection
-
-?>

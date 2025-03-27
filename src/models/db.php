@@ -90,7 +90,7 @@ try {
     $stmt->bindValue(":limit", $limit, PDO::PARAM_INT);
     $stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
 
-echo  $sql;
+
 
     $stmt->execute();
 

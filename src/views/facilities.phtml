@@ -87,6 +87,191 @@
             padding: 10px 15px;
             cursor: pointer;
         }
+
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Search and Filter */
+.search-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-filter input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Facility Listing */
+.faccon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.facility {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.facility:hover {
+    transform: translateY(-5px);
+}
+
+.facility h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #4CAF50;
+}
+
+.facility p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.pagination a:hover {
+    background-color: #388E3C;
+}
+
+.pagination a:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+/* General Styling */
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.facility-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.facility-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.textarea-field {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+
     </style>
 </head>
 <body>
@@ -120,18 +305,32 @@ if (isset($_SESSION['loggedin']) && $_SESSION['userType'] == 'Manager') {
     // exit();
     $currentURL = "/ecobuddy/create_facility";
 
-   echo " <h2>Manage Facilities</h2>" ;
+//    echo " <h2>Manage Facilities</h2>" ;
     
-     echo "   <section >" ;
-             echo "      <h3>Add New Facility</h3>" ;
-             echo "      <form action='{$currentURL}' method='POST'>" ;
-                echo "       <input type='text' name='title' placeholder='Title' required>" ;
-               echo "        <input type='text' name='category' placeholder='Category' required>" ;
-               echo "        <textarea name='description' placeholder='Description' required></textarea>" ;
-                echo "      <input type='text' name='address' placeholder='Address' required>" ;
-                 echo "      <button type='submit'>Add Facility</button>" ;
-             echo "      </form>" ;
-         echo "      </section>" ;
+//      echo "   <section >" ;
+//              echo "      <h3>Add New Facility</h3>" ;
+//              echo "      <form action='{$currentURL}' method='POST'>" ;
+//                 echo "       <input type='text' name='title' placeholder='Title' required>" ;
+//                echo "        <input type='text' name='category' placeholder='Category' required>" ;
+//                echo "        <textarea name='description' placeholder='Description' required></textarea>" ;
+//                 echo "      <input type='text' name='address' placeholder='Address' required>" ;
+//                  echo "      <button type='submit'>Add Facility</button>" ;
+//              echo "      </form>" ;
+//          echo "      </section>" ;
+
+echo "<h2 class='page-title'>Manage Facilities</h2>";
+
+echo "<section class='facility-section'>";
+echo "  <h3 class='section-title'>Add New Facility</h3>";
+echo "  <form action='{$currentURL}' method='POST' class='facility-form'>";
+echo "      <input type='text' name='title' class='input-field' placeholder='Title' required>";
+echo "      <input type='text' name='category' class='input-field' placeholder='Category' required>";
+echo "      <textarea name='description' class='textarea-field' placeholder='Description' required></textarea>";
+echo "      <input type='text' name='address' class='input-field' placeholder='Address' required>";
+echo "      <button type='submit' class='submit-btn'>Add Facility</button>";
+echo "  </form>";
+echo "</section>";
+
 }
 ?>
 

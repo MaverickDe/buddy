@@ -31,16 +31,17 @@ public $usermodel;
             $password = $_POST['password'];
 
 
-            echo $username;
-            echo $password;
+         
         
     
             $admin = $this->usermodel->findOne([["username"=>$username,"userType"=>"Manager"]]);
          
-        echo  $admin['password'];
-        echo password_verify($password, $admin['password']);
+     
+        if (!$admin) {
+            die("User not found.");
+        }
             // Verify password
-            if ( true) {
+            if ( password_verify($password, $admin['password'])) {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['userType'] = 'Manager';
                 $_SESSION['username'] = $username;

@@ -13,6 +13,88 @@ $facility = $_SESSION["facility"]
     <title><?php echo htmlspecialchars($facility['title']); ?> - Facility Details</title>
     <link rel="stylesheet" href="public/styles/facility.css"/>
     <link rel="stylesheet" href="public/styles/styles.css"/>
+    <style>
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background-color: #007B5E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Facility details */
+h1 {
+    color: #007B5E;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Links (Delete & Update buttons) */
+.container div {
+    margin-top: 15px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a[href*="delfacility"] {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+a[href*="update"] {
+    background-color: #007B5E;
+    color: white;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Map container */
+#map {
+    margin-top: 20px;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+
+    </style>
 </head>
 <body>
 <header>
@@ -27,7 +109,12 @@ $facility = $_SESSION["facility"]
         <!-- <img src="<?php echo htmlspecialchars($facility['photo']); ?>" alt="Facility Image" class="facility-image"> -->
         
 
-<div>
+
+
+        
+          <?php if (isset($_SESSION['user_id'])): ?> 
+              <?php if (isset($_SESSION['userType']) && $_SESSION['userType'] == 'Manager'): ?>
+                <div>
 <?php 
   $deleteurl = "/ecobuddy/delfacility/?id={$facility['id']}";
 echo  "<a href={$deleteurl}> delete </a>";
@@ -39,17 +126,106 @@ echo  "<a href={$deleteurl}> delete </a>";
 echo  "<a href={$deleteurl}> update </a>";
 ?>
 </div>
-
-        
-        <!-- <?php if (isset($_SESSION['user_id'])): ?>
-            <form action="mark_visited.php" method="post">
-                <input type="hidden" name="facility_id" value="<?php echo $facilityId; ?>">
-                <button type="submit">Mark as Visited</button>
-            </form>
-            <!-- Add a review form here if logged in -->
         <?php else: ?>
-            <p><a href="login.php">Login</a> to mark as visited or leave a review.</p>
-        <?php endif; ?> -->
+
+
+<div>
+<?php 
+  $deleteurl = "/ecobuddy/update/?id={$facility['id']}";
+echo  "<a href={$deleteurl}> Add a review status </a>";
+?>
+</div>
+
+            <?php endif; ?> 
+        <?php else: ?>
+            <p><a href="/ecobuddy/login">Login</a> To leave a review.</p>
+        <?php endif; ?> 
+        <div id="map" style="width: 100%; max-width:500px"></div>
     </div>
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize the map
+    const map = L.map('map').setView([0, 0], 13); // Default view before finding locations
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Facility data from PHP session
+    const facility = <?php echo json_encode($facility, JSON_NUMERIC_CHECK); ?>;
+    const customLat = facility.latitude || 0;
+    const customLng = facility.longitude || 0;
+    const customStreet = facility.address || "Unknown Location";
+
+    // Array to store marker coordinates
+    let markerBounds = [];
+
+    // Function to add the facility marker
+    function addCustomMarker() {
+        if (customLat !== 0 && customLng !== 0) {
+            const facilityMarker = L.marker([customLat, customLng])
+                .addTo(map)
+                .bindPopup(customStreet)
+                .openPopup();
+            markerBounds.push([customLat, customLng]); // Add to bounds
+        }
+    }
+
+    // Get user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const { latitude, longitude } = position.coords;
+
+                // Add user location marker
+                const userMarker = L.marker([latitude, longitude])
+                    .addTo(map)
+                    .bindPopup("You are here!")
+                    .openPopup();
+
+                // Add both markers to the bounds array
+                markerBounds.push([latitude, longitude]);
+                addCustomMarker();
+
+                // Fit the map to show both markers
+                if (markerBounds.length > 0) {
+                    map.fitBounds(markerBounds, { padding: [50, 50] }); // Ensure both markers are visible
+                }
+            },
+            () => {
+                alert("Geolocation permission denied. Using default location.");
+                addCustomMarker();
+
+                // Fit bounds for facility only if user location is unavailable
+                if (markerBounds.length > 0) {
+                    map.fitBounds(markerBounds, { padding: [50, 50] });
+                }
+            }
+        );
+    } else {
+        alert("Geolocation is not supported by your browser.");
+        addCustomMarker();
+
+        // Fit bounds for facility only
+        if (markerBounds.length > 0) {
+            map.fitBounds(markerBounds, { padding: [50, 50] });
+        }
+    }
+});
+
+
+</script>
+
 </body>
 </html>

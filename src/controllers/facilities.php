@@ -20,7 +20,7 @@ public $facilitymodel;
     {
 
 
-        echo "text";
+    
 
         $page = $_GET['page'] ?? 1;  // Retrieves 'John'
 

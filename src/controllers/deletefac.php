@@ -22,7 +22,8 @@ public $facilitymodel;
 
 
         if ($_SESSION['userType'] != 'Manager') {
-            header('Location: adminlogin');
+            // header('Location: adminlogin');
+            header('Location: /ecobuddy/adminlogin');
             exit();
         }
         

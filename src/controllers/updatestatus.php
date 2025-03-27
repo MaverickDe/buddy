@@ -8,7 +8,7 @@ require_once  __DIR__  .'/control.php';
 use App\Controller;
 
 
-class UpdateFacilityController  extends Controller
+class UpdateFacilityStatusController  extends Controller
 {
 public $facilitymodel;
 
@@ -21,10 +21,7 @@ public $facilitymodel;
     {
 
 
-        if (!isset($_SESSION['userType']) || $_SESSION['userType'] != 'Manager') {
-            header('Location: /ecobuddy/login');
-            exit();
-        }
+      
         
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    
@@ -39,15 +36,6 @@ public $facilitymodel;
 
                 if (isset($_POST["id"])) {
                     unset($_POST["id"]);
-                }
-
-                if (!isset($_SESSION['userType']) || $_SESSION['userType'] != 'Manager') {
-                    if (!empty($_POST)) {
-                        $status = $_POST["status"] ?? null; 
-                        
-                        $_POST = ["status" => $status]; 
-                    }
-                    
                 }
         
                 // $photo = $_FILES['photo']['name'];
@@ -65,9 +53,7 @@ public $facilitymodel;
 
 
             //    $_SESSION['facilities'] = $facilities;
-            header("Location: /ecobuddy/facility?id=$id");
-            exit; // Always include exit after header to stop script execution
-            
+            header('Location: /ecobuddy/facilities/?page=1');
          
         
         

@@ -23,7 +23,7 @@ public $facilitymodel;
      
         if (isset($_GET['id'])) {
             $facilityId = $_GET['id'];
-            echo $facilityId;
+        
             // $facility = Facility::getFacilityById($facilityId);  // Assuming a method exists to get facility data
             $facility =  $this->facilitymodel->findOne([["id"=>$facilityId]]);
         $_SESSION['facility'] = $facility  ;
