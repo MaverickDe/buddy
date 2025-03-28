@@ -287,7 +287,8 @@ if (isset($_SESSION['loggedin'])) {
 }
 else{
 
-  echo"  <a href='/ecobuddy/adminlogin'>admin login</a>";
+  echo"  <a href='/ecobuddy/adminlogin'>adminLogin</a>";
+  echo"  <a href='/ecobuddy/login'> login</a>";
 
 
 }
@@ -300,7 +301,7 @@ else{
     </header>
     <?php
 
-if (isset($_SESSION['loggedin']) && $_SESSION['userType'] == 'Manager') {
+if (isset($_SESSION['loggedin']) && isset($_SESSION['userType']) && $_SESSION['userType'] == 'Manager') {
     // header('Location: login.php'); // Redirect non-admin users
     // exit();
     $currentURL = "/ecobuddy/create_facility";
@@ -389,8 +390,11 @@ echo "</section>";
               echo "     <p><strong>Category:</strong> " . htmlspecialchars($facility["category"]) . "</p>";
                 echo "   <p><strong>Location:</strong>" . htmlspecialchars($facility["address"]) ."</p>";
              echo '   </a>';
+             if (isset($_SESSION['loggedin']) && isset($_SESSION['userType']) && $_SESSION['userType'] == 'Manager') {
 
-             echo  "<a href={$deleteurl}> delete </a>";
+
+                 echo  "<a href={$deleteurl}> delete </a>";
+             }
         echo "</div>";
       
 

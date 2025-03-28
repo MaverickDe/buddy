@@ -55,7 +55,18 @@ public function find($data)
 require_once __DIR__."/../helpers/const.php";
 
 
-[$filters , $page ] = $data;
+// [$filters , $page,$cond ] = $data;
+// $filters = $data->filters;
+// $page = $data->page;
+// $cond = $data->cond;
+
+$filters = $data["filters"] ?? null;
+$page = $data["page"] ?? null;
+$cond = $data["cond"] ?? null;
+
+// echo "<pre>";
+// print_r($data["cond"]);
+// echo "</pre>";
 
 
 try {
@@ -66,15 +77,27 @@ try {
 
     $sql = "SELECT * FROM {$this->tbname}  ";
 
-    if(count($filters)){
+    if(($filters && count($filters) )|| $cond){
+        // echo "hello";
         $sql.="WHERE";
     }
 
     $conditions = [];
-    foreach ($filters as $key => $value) {
-        $conditions[] = " $key = :$key "; 
+   
+    if($cond){
+
+        $conditions =$cond[0];
+
+    }
+    else if($filters){
+
+        foreach ($filters as $key => $value) {
+            $conditions[] = " $key = :$key "; 
+        }
     }
     $sql .= implode(" AND ", $conditions); 
+
+    // echo $sql;
     $sql .= " ORDER BY id DESC ";
        $sql .= " LIMIT :limit OFFSET :offset";
 
@@ -82,9 +105,18 @@ try {
 
     $stmt = $this->db->prepare($sql);
 
-  
-    foreach ($filters as $key => $value) {
-        $stmt->bindValue(":$key", $value); 
+    if($cond){
+
+        // $conditions =$cond;
+
+        foreach ($cond[1] as $key => $value) {
+            $stmt->bindValue(":$key", $value); 
+        }
+    }  else if($filters){
+
+        foreach ($filters as $key => $value) {
+            $stmt->bindValue(":$key", $value); 
+        }
     }
 
     $stmt->bindValue(":limit", $limit, PDO::PARAM_INT);

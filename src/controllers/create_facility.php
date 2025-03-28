@@ -25,6 +25,13 @@ public $facilitymodel;
             header('Location: adminlogin');
             exit();
         }
+
+        $requiredFields = ['title', 'category', 'description', 'address', 'city', 'postal_code', 'latitude', 'longitude'];
+
+if (array_diff_key(array_flip($requiredFields), $_POST)) {
+    die( "One or more required fields are missing.");
+}
+
         
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // move_uploaded_file($_FILES['photo']['tmp_name'], 'uploads/'.$photo);

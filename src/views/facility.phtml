@@ -112,7 +112,7 @@ a:hover {
 
 
         
-          <?php if (isset($_SESSION['user_id'])): ?> 
+          <?php if (isset($_SESSION['loggedin'])): ?> 
               <?php if (isset($_SESSION['userType']) && $_SESSION['userType'] == 'Manager'): ?>
                 <div>
 <?php 
@@ -144,9 +144,7 @@ echo  "<a href={$deleteurl}> Add a review status </a>";
     </div>
 
 
-
-
-
+ 
 
 
 

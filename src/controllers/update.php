@@ -21,7 +21,7 @@ public $facilitymodel;
     {
 
 
-        if (!isset($_SESSION['userType']) || $_SESSION['userType'] != 'Manager') {
+        if (!isset($_SESSION['loggedin']) ) {
             header('Location: /ecobuddy/login');
             exit();
         }
@@ -32,7 +32,11 @@ public $facilitymodel;
 
  
             
-           
+            $requiredFields = ["id"];
+
+            if (array_diff_key(array_flip($requiredFields), $_POST)) {
+                die ("Id is missing");
+            } 
           
                 $id = $_POST['id'];
 

@@ -20,7 +20,7 @@ public $usermodel;
     {
 
         if (isset($_SESSION['loggedin'])) {
-            header('Location: facility.php'); 
+            header('Location: facilities'); 
             exit();
         }
         

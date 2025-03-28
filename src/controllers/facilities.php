@@ -25,16 +25,25 @@ public $facilitymodel;
         $page = $_GET['page'] ?? 1;  // Retrieves 'John'
 
         $conditions = [];
+        $values = [];
+
+        if (isset($_GET['page'])) {
+            unset($_GET['page']);
+        }
         foreach ($_GET as $key => $value) {
             // $conditions[] = " $key = :$key "; 
-            if(trim($value) !=="" && trim($key)!="page"){
-                $conditions[$key] = $value; 
+            $trimmedValue = trim($value);
+            if($trimmedValue !=="" && $trimmedValue!="page"){
+                $conditions[] = " $key LIKE :$key "; 
+                $values[$key] = "%$trimmedValue%"; 
 
             }
         }
+    
+$cond= count($conditions) ?  [$conditions,$values]:null;
 
 
-       $facilities =  $this->facilitymodel->find([$conditions,$page]);
+       $facilities =  $this->facilitymodel->find(["cond"=>$cond,"page"=>$page]);
        $_SESSION['facilities'] = $facilities;
        $_SESSION['page'] =       $page;
         

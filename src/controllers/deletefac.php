@@ -30,6 +30,13 @@ public $facilitymodel;
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
             echo "deleting";
+
+            $requiredFields = ["id"];
+
+if (array_diff_key(array_flip($requiredFields), $_GET)) {
+    die ("One or more required fields are missing.");
+} 
+
             // $title = $_POST['title'];
             // $category = $_POST['category'];
             // $description = $_POST['description'];
